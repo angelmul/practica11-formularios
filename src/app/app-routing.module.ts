@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'formulario-cuenta',
+    loadChildren: () => import('./formulario-cuenta/formulario-cuenta.module').then( m => m.FormularioCuentaPageModule)
+  },
+  {
+    path: 'segunda-pantalla',
+    loadChildren: () => import('./segunda-pantalla/segunda-pantalla.module').then( m => m.SegundaPantallaPageModule)
+  },
 ];
 
 @NgModule({
